@@ -1,6 +1,7 @@
 import { ArrowLeftOutlined, ArrowRightOutlined } from '@material-ui/icons';
 import { useState } from 'react';
 import styled from 'styled-components';
+import { sliderItems } from '../data'; 
 
 const Container = styled.div`
     width: 100%;
@@ -86,36 +87,20 @@ const Slider = () => {
             <ArrowLeftOutlined/>
         </Arrow>
         <Wrapper slideIndex={slideIndex}>
-            <Slide bg="f5fafd">
-                <ImgContainer>
-                    <Image src="https://thumbs.dreamstime.com/b/woman-fashion-long-prom-dress-elegant-girl-blue-ball-gown-clothes-isolated-over-white-83241956.jpg" alt="image" />
-                </ImgContainer>
-                <InfoContainer>
-                    <Title>SUMMER SALE</Title>
-                    <Desc>DON'T COMPROMISE ON STYLE GET FLAT 30% OFF FOR NEW ARRIVALS.</Desc>
-                    <Button>SHOP NOW</Button>
-                </InfoContainer>
-            </Slide>
-            <Slide bg="fcf1ed">
-                <ImgContainer>
-                    <Image src="https://thumbs.dreamstime.com/b/woman-fashion-long-prom-dress-elegant-girl-blue-ball-gown-clothes-isolated-over-white-83241956.jpg" alt="image" />
-                </ImgContainer>
-                <InfoContainer>
-                    <Title>WINTER SALE</Title>
-                    <Desc>DON'T COMPROMISE ON STYLE GET FLAT 30% OFF FOR NEW ARRIVALS.</Desc>
-                    <Button>SHOP NOW</Button>
-                </InfoContainer>
-            </Slide>
-            <Slide bg='fbf0f4'>
-                <ImgContainer>
-                    <Image src="https://thumbs.dreamstime.com/b/woman-fashion-long-prom-dress-elegant-girl-blue-ball-gown-clothes-isolated-over-white-83241956.jpg" alt="image" />
-                </ImgContainer>
-                <InfoContainer>
-                    <Title>POPULAR SALE</Title>
-                    <Desc>DON'T COMPROMISE ON STYLE GET FLAT 30% OFF FOR NEW ARRIVALS.</Desc>
-                    <Button>SHOP NOW</Button>
-                </InfoContainer>
-            </Slide>
+            {
+                sliderItems.map((item) => (
+                    <Slide bg={item.bg}>
+                    <ImgContainer>
+                        <Image src={item.img} alt="image" />
+                    </ImgContainer>
+                    <InfoContainer>
+                        <Title>{item.title}</Title>
+                        <Desc>{item.desc}</Desc>
+                        <Button>SHOP NOW</Button>
+                    </InfoContainer>
+                    </Slide>
+                ))
+            }
         </Wrapper>
         <Arrow direction='right' onClick={() => handleClick('right')}>
             <ArrowRightOutlined/>

@@ -1,3 +1,4 @@
+import { NavLink } from 'react-router-dom';
 import { Badge } from '@material-ui/core';
 import { Search, ShoppingCartOutlined } from '@material-ui/icons';
 import React from 'react';
@@ -49,6 +50,7 @@ const MenuItem = styled.div`
     font-size: 14px;
     cursor: pointer;
     margin-left: 25px;
+    text-decoration: none;
 `;
 
 const Navbar = () => {
@@ -66,8 +68,8 @@ const Navbar = () => {
                 <Logo>MCV.</Logo>
             </Center>
             <Right>
-                <MenuItem>REGISTER</MenuItem>
-                <MenuItem>SIGN IN</MenuItem>
+                <MenuItem><NavLink to='/register'>REGISTER</NavLink></MenuItem>
+                <MenuItem><NavLink to='/login'>SIGN IN</NavLink></MenuItem>
                 <MenuItem>
                     <Badge badgeContent={4} color='primary'>
                         <ShoppingCartOutlined/>

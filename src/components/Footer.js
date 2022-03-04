@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import { Facebook, Instagram, MailOutline, Phone, Pinterest, Room, Twitter } from "@material-ui/icons";
 import styled from "styled-components";
 
@@ -86,14 +87,14 @@ const Footer = () => {
         <Center>
             <Title>Useful Links</Title>
             <List>
-                <ListItem>Home</ListItem>
+               <ListItem><Link to='/'>Home</Link></ListItem> 
                 <ListItem>Cart</ListItem>
-                <ListItem>Man Fashion</ListItem>
+                <ListItem><Link to='/product'>Product</Link></ListItem>
                 <ListItem>Woman Fashion</ListItem>
                 <ListItem>Accesories</ListItem>
                 <ListItem>My Account</ListItem>
                 <ListItem>Order Tracking</ListItem>
-                <ListItem>Wishlist</ListItem>
+                <ListItem><Link to='/productlist'>ProductList</Link></ListItem>
                 <ListItem>Wishlist</ListItem>
                 <ListItem>Terms</ListItem>
             </List>

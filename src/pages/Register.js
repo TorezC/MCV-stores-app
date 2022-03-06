@@ -8,7 +8,8 @@ const Container = styled.div`
         rgba(255,255,255,0.5)
     ),
      url('https://images.pexels.com/photos/6984661/pexels-photo-6984661.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940') center;
-    display: flex;
+     background-size: cover;
+     display: flex;
     align-items: center;
     justify-content: center;
 `;
@@ -50,12 +51,12 @@ const Register = () => {
       <Wrapper>
           <Title>CREATE AN ACCOUNT</Title>
           <Form>
-              <Input placeholder='First name' />
-              <Input placeholder='Last name' />
-              <Input placeholder='Username' />
-              <Input placeholder='Email' />
-              <Input placeholder='Password' />
-              <Input placeholder='Confirm password' />
+              <Input type='text' placeholder='First name' />
+              <Input type='text' placeholder='Last name' />
+              <Input type='text' placeholder='Username' />
+              <Input type='email' placeholder='Email' />
+              <Input type='password' placeholder='Password' />
+              <Input type='password' placeholder='Confirm password' />
               <Agreement>By creating an account, I consent to the processing of my personal data in accordance with the <b>PRIVACY POLICY</b> </Agreement>
               <Button>CREATE</Button>
           </Form>

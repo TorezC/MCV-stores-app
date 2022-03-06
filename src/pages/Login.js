@@ -53,8 +53,8 @@ const Login = () => {
       <Wrapper>
           <Title>SIGN IN</Title>
           <Form>
-              <Input placeholder='Username' />
-              <Input placeholder='Password' />
+              <Input type='text' placeholder='Username' />
+              <Input type='password' placeholder='Password' />
               <Button>SIGN IN</Button>
               <Links>
                 <Link to='fg'>DO NOT REMEMBER THE PASSWORD</Link>
